@@ -29,7 +29,7 @@ include 'header.php';
 					<img src = 'image/<?php echo $sql['image'];?>'  width='100%' height='150px'>
 					<div>Price Rs <?php echo $sql['price'];?></div>
 				<div>
-						<button class='btn btn-primary'>Buy</button>  <button class='btn btn-primary'>Cart</button></div><br>							
+						<button class='btn btn-primary'>Buy</button>  <button class='btn btn-primary' onclick='addCart( <?php echo $sql['id'];?>,<?php echo $_SESSION['loggedInUser']['id'];?>)'>Cart</button></div><br>							
 			</div>
 			<?php
 		}?>
