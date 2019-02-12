@@ -14,10 +14,9 @@ function userRegister($data,$con)
 	$first_name = !empty($data['first_name'])?$data['first_name']:false;
 	$last_name = !empty($data['last_name'])?$data['last_name']:false;
 	$mobile = !empty($data['mobile'])?$data['mobile']:false;
-	$type = !empty($data['type'])?$data['type']:false;
 	$confirmpassword = !empty($data['confirmpassword'])?$data['confirmpassword']:false;
 	if($password  == $confirmpassword ){
-if($userName&&$password&&$first_name&&$last_name&&$mobile&&$type)
+if($userName&&$password&&$first_name&&$last_name&&$mobile)
 	{
 		$sql = 'select * from user where mobile = '.$mobile;
 		mysqli_query($con,$sql);
@@ -42,8 +41,8 @@ if($userName&&$password&&$first_name&&$last_name&&$mobile&&$type)
 		
 		</script>";
 		}
-		$insert = "insert user(first_name,last_name,mobile,username,password,type)
-		values('$first_name','$last_name',$mobile,'$userName','$password',$type)";
+		$insert = "insert user(first_name,last_name,mobile,username,password,)
+		values('$first_name','$last_name',$mobile,'$userName','$password')";
 		if(mysqli_query($con,$insert)){
 		return "User created successfully please login Please<a href='http://localhost/complaint/login.php'> click here </a> to login ";
 		}else{

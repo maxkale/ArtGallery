@@ -29,3 +29,8 @@ function logout()
 			}
 
 		}
+		function buyProduct(data)
+		{
+			console.log(data);
+		}
+

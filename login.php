@@ -77,13 +77,7 @@ function checkLogIn($data,$con){
 									</div>
 								</form>
 								<form autocomplete="off" id="register-form" method="post" action="register.php" role="form" style="display: none;">
-									<div class="form-group">
-										<select   name="type" id="type" tabindex="1" class="form-control" >
-											<option value=''>Select For </option>
-											<option value='1'>Teacher </option>
-											<option value='2'>Student </option>
-										</select>
-									</div>
+								
 									<div class="form-group">
 										<input type="text" name="first_name" id="first_name" tabindex="1" class="form-control" placeholder="First Name" value="">
 									</div>
