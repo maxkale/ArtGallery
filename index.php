@@ -28,9 +28,12 @@ include 'header.php';
 				<h4><?php echo $sql['name'];?></h4>
 					<img src = 'image/<?php echo $sql['image'];?>'  width='100%' height='150px'>
 					<div>Price Rs <?php echo $sql['price'];?></div>
-				<div>
+				<div><?php if($_SESSION['loggedInUser']['id']!=1){?>
 						<a class='btn btn-primary' href='orderPlace.php?product_id=<?php echo $sql['id'];?>'>Buy</a>  <button class='btn btn-primary'
-						onclick='addCart( <?php echo $sql['id'];?>,<?php echo $_SESSION['loggedInUser']['id'];?>)'>Cart</button></div><br>							
+						onclick='addCart( <?php echo $sql['id'];?>,<?php echo $_SESSION['loggedInUser']['id'];?>)'>Cart</button>
+						<?php }?>
+						</div>
+						<br>							
 			</div>
 			<?php
 		}?>

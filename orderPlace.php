@@ -29,8 +29,8 @@ include 'header.php';
 			<form action="order.php" method='post'>
 			<?php
 			if(!empty($_GET['cart_id']))?>
-			<input type='hidden' name='cart_id' value='<?php echo $product_id;?>'>
-			<input type='hidden' name='product_id' value='<?php echo $_GET['cart_id'];?>'>
+			<input type='hidden' name='cart_id' value='<?php echo $_GET['cart_id'];?>'>
+			<input type='hidden' name='product_id' value='<?php echo $product_id;?>'>
 				<h4><?php echo $sql['name'];?></h4>
 					<img src = 'image/<?php echo $sql['image'];?>'  width='100%' height='150px'>
 				</div>

@@ -43,8 +43,11 @@ include 'auth.php';
                     <h3><?php echo $_SESSION['loggedInUser']['first_name'].' '.$_SESSION['loggedInUser']['last_name'];?></h3>
                     <ul class="nav nav-pills nav-stacked sidear">
                         <li class="active"><a href="index.php">Gallery</a></li>
+						<?php if($_SESSION['loggedInUser']['id']!=1){?>
                         <li class="active"><a href="cart.php">Cart</a></li>    
-                        <li class="active"><a href="myorder.php">Order</a></li>    
+                        <li class="active"><a href="myorder.php">Order</a></li>
+						<?php }else{?>
+                        <li class="active"><a href="addProduct.php">Add Product</a></li>   <?php }?> 
                         <li><a href="javascript:void(0)" onclick='logout()'>Logout</a></li>
                     </ul><br>
                 </div>
